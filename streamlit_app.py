@@ -74,3 +74,11 @@ if ingredients_list:
             st.success('Order(s) Updated!', icon="✅")
         except:
             st.success('Something went wrong!')
+
+
+# New section to display fruityvice nutrition information
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
+
+
